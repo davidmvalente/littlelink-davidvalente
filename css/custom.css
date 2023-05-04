@@ -1,0 +1,21 @@
+/*
+* davidvalente.xyz
+* Copyright 2023, David Valente
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+
+/* Avatar picture */
+.avatar {
+  width: 256px;
+  height: 256px;
+  object-fit: cover;
+  background-position: center;
+  border-radius: 50%;  /* 10%-40%: Squircles, 50% (default): True circle */
+}
+
+/* Footer text */
+.footer {
+  font-size: 70%;
+}
