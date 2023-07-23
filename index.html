@@ -61,6 +61,12 @@
 
   <script>
     mixpanel.init('626a4f7913dedb0a37552ca9beaf3391', { debug: true, track_pageview: true, persistence: 'localStorage' });
+    mixpanel.track_links(".button-substack","Clicked Substack");
+    mixpanel.track_links(".button-default","Clicked Mail");
+    mixpanel.track_links(".button-twit","Clicked Twitter");
+    mixpanel.track_links(".button-linked","Clicked LinkedIn");
+    mixpanel.track_links(".button-github","Clicked GitHub");
+    mixpanel.track_links(".button-google-black","Clicked Resume");
   </script>
 
   <!-- Primary Page Layout
