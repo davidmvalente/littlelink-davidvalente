@@ -65,6 +65,14 @@
 </head>
 
 <body>
+  <script>
+    mixpanel.init('626a4f7913dedb0a37552ca9beaf3391', { debug: true, track_pageview: true, persistence: 'localStorage' });
+    mixpanel.track_links(".button-substack","Clicked Substack");
+    mixpanel.track_links(".button-calendly","Clicked Calendly");
+    mixpanel.track_links("#link-linkedin","Clicked LinkedIn");
+    mixpanel.track_links("#link-github","Clicked GitHub");
+    mixpanel.track_links("#link-twitter","Clicked Twitter");
+  </script>
   <div class="warp-container">
       <div class="warp-grid"></div>
   </div>
@@ -109,10 +117,10 @@
           <section class="section terminal">
               <h2>Let's Connect</h2>
               <p> 
-                <span class="blink">></span> <a href="mailto:hello@davidvalente.xyz">hello@davidvalente.xyz</a> | 
-                <a href="https://twitter.com/davXval">@davXval</a> | 
-                <a href="https://www.linkedin.com/in/davidmvalente/">LinkedIn</a> |                 
-                <a href="https://www.github.com/davidmvalente/">GitHub</a>
+                <span class="blink">></span> <a id="link-email" href="mailto:hello@davidvalente.xyz">hello@davidvalente.xyz</a> | 
+                <a id="link-twitter" href="https://twitter.com/davXval">@davXval</a> | 
+                <a id="link-linkedin" href="https://www.linkedin.com/in/davidmvalente/">LinkedIn</a> |                 
+                <a id="link-github" href="https://www.github.com/davidmvalente/">GitHub</a>
               </p>
               <p>
                   Working on something innovative in the Web3 space? Curious to exchange ideas around some of my outside interests?
