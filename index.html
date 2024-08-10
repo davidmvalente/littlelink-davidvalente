@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-
 <head prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile#">
 
   <!-- Page Information
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>David Valente</title>
-  <meta name="description" content="David Valente is a Barcelona-based Writer, Forecaster & Web3 analyst.">
+  <meta name="description" content="David Valente is a Barcelona-based writer, forecaster & Web3 analyst. He's the author of Substack publication Do Clouds Feel Vertigo?">
   <meta name="author" content="David Valente">
+  <meta name="title" content="David Valente">
   <!-- <meta property="og:image" content="/images/profile.jpg" /> -->
   <meta property="og:type" content="profile">
   <meta property="profile:first_name" content="David">
@@ -54,9 +53,9 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/custom.css">
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+  <!-- Favicon from Emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22>
+    <text y=%22.9em%22 font-size=%2290%22>👾</text></svg>">
 
   <!-- Mixpanel -->
   <script type="text/javascript">
@@ -67,11 +66,17 @@
 </head>
 
 <body>
+  <script>
+    mixpanel.init('626a4f7913dedb0a37552ca9beaf3391', { debug: true, track_pageview: true, persistence: 'localStorage' });
+    mixpanel.track_links(".button-substack","Clicked Substack");
+    mixpanel.track_links(".button-calendly","Clicked Calendly");
+    mixpanel.track_links("#link-linkedin","Clicked LinkedIn");
+    mixpanel.track_links("#link-github","Clicked GitHub");
+    mixpanel.track_links("#link-twitter","Clicked Twitter");
+  </script>
   <div class="warp-container">
       <div class="warp-grid"></div>
   </div>
-  
-
 
   <div class="container">
       <header>
@@ -83,6 +88,7 @@
       </header>
       
       <main>
+          <!-- About section -->
           <section class="section">
               <h2>About Me</h2>
               <p>
@@ -90,9 +96,7 @@
                   Passionate about decentralized agency, emerging tech, impact.
               </p>
           </section>
- 
-
-          <!-- New Substack section -->
+          <!-- Substack section -->
           <section class="substack-section">
               <img src="images/cloudy-head-magritte.png" alt="Cloudy Head by Magritte" class="profile-img">
               <h2 class="substack-title">Do Clouds Feel Vertigo?</h2>
@@ -100,7 +104,7 @@
               <p>Make sense of the world of tomorrow. Get Smarter. Dive into an exploration of technology, philosophy, and other rabbit holes of the human experience.</p>
               <a class="cta-button button button-substack" href="https://cloudvertigo.substack.com" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/substack.svg" alt="">Read cloud vertigo</a><br>
           </section>
-
+          <!-- Interests section -->
           <section class="section">
               <h2>Outside Interests</h2>
               <ul>
@@ -109,25 +113,36 @@
                   <li> <b>Cybernetics</b>: Vipassana, lucid dreaming technologies, spatial computing & VR, future of human imagination </li>
                   <li> <b>Biology</b>: complex systems equilibrium, fragile ecosystems, fungal networks, decentralized plant intelligence</li>
               </ul>
-          </section>          
+          </section>
+          <!-- About section -->         
           <section class="section terminal">
               <h2>Let's Connect</h2>
-              <p>
-                  Working on something innovative in the Web3 space? 
-                  Shedule a chat [<a href="https://calendly.com/davidvalente/let-s-connect">Calendly</a>] and let's explore possibilities to collaborate, or just exchange ideas.
-              </p>
-
               <p> 
-                  <a href="mailto:hello@davidvalente.xyz">hello@davidvalente.xyz</a> | 
-                  <a href="https://twitter.com/davXval">@davXval</a> | 
-                  <a href="https://www.linkedin.com/in/davidmvalente/">LinkedIn</a> |                 
-                  <a href="https://www.github.com/davidmvalente/">GitHub</a>
+                <span class="blink">></span> <a id="link-email" href="mailto:hello@davidvalente.xyz">hello@davidvalente.xyz</a> |
+                <a id="link-twitter" href="https://twitter.com/davXval">@davXval</a> | 
+                <a id="link-linkedin" href="https://www.linkedin.com/in/davidmvalente/">LinkedIn</a> |                 
+                <a id="link-github" href="https://www.github.com/davidmvalente/">GitHub</a>
               </p>
-          </section>
+              <p>
+                  Working on something innovative in the Web3 space? Curious to exchange ideas around some of my outside interests?
+                  Shedule a quick chat and let's explore possibilities to collaborate.
+              </p>
+              <a 
+                class="cta-button button button-calendly" 
+                style="margin: 0 auto; display: block;"
+                href="https://calendly.com/davidvalente/let-s-connect" 
+                target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/calendly.svg" alt="">Schedule a quick chat</a><br> 
+    
+              </section>
+              <p>
+                Sensitive correspondance? Encrypt your message with <a href="https://mailvelope.com/en">Mailenvelope</a> using my
+                <a href="https://keys.mailvelope.com/pks/lookup?op=get&search=securemail@davidvalente.xyz">PGP Public Key</a>                
+                [Fingerprint: 610C 6351 1DD0 1139 1FBD 1D8E B560 8893 6D58 FBB6]
+              </p>
       </main>
-      
+      <!-- Footer -->
       <footer>
-          <p>© 2024 David Valente | Built with curiosity, LLMs and love.</p>
+          <p>© 2024 David Valente | Built with curiosity, LLMs and <a href="https://littlelink.io" target="_blank" rel="noopener" role="button">LittleLink</a>.</p>
       </footer>
   </div>
 </body>
