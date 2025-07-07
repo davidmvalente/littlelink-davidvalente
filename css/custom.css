@@ -179,7 +179,7 @@ a:hover, a:focus {
 }
 
 /* New styles for the Substack section and button */
-.substack-section {
+.standout-section {
   background-color: rgba(10, 25, 47, 0.7);
   border: 0px solid var(--accent-color);
   padding: 2rem;

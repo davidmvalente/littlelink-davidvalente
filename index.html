@@ -70,6 +70,7 @@
     mixpanel.init('626a4f7913dedb0a37552ca9beaf3391', { debug: true, track_pageview: true, persistence: 'localStorage' });
     mixpanel.track_links(".button-substack","Clicked Substack");
     mixpanel.track_links(".button-calendly","Clicked Calendly");
+    mixpanel.track_links(".button-isagog","Clicked ISAGOG");
     mixpanel.track_links("#link-linkedin","Clicked LinkedIn");
     mixpanel.track_links("#link-github","Clicked GitHub");
     mixpanel.track_links("#link-twitter","Clicked Twitter");
@@ -83,7 +84,7 @@
           <img src="images/profile.jpg" alt="David Valente" class="profile-img">
           <h1>David Valente</h1>
           <p class="terminal">
-              <span class="blink">></span> Curious Mind | Writer | Web3 Analyst | AI Consultant | Forecaster 
+              <span class="blink">></span> Curious Mind | Engineering Manager | Web3 Ventures Analyst | Forecaster 
           </p>
       </header>
       
@@ -95,9 +96,23 @@
                   I live to learn. Exploring the frontiers of technology and human potential. 
                   Passionate about decentralized agency, emerging tech, impact.
               </p>
+              <p>
+                Currently serving as Chief Technology Officer at <a href="https://www.isagog.com" target="_blank" rel="noopener" role="button">Isagog</a>, an Italian Knowledge Graphs company. Scaling up its technical team, managing end-to-end product development and leading enterprise solution engineering.
+              </p>
+              <p>
+                Previously, I worked on HCL / IBM Workload Automation as software engineer, scrum master, customer advocate. Mathematics and Philosophy B.A.
+              </p>
           </section>
+          <!-- ISAGOG section -->
+          <section class="standout-section isagog">
+            <img src="images/isagog-tree.webp" alt="Isagog AI Tree" class="profile-img" style="background-color: #5e9c4d;">
+            <h2 class="substack-title">ISAGOG</h2>
+            <p class="substack-subtitle">AI That Makes Sense</p>
+            <p> We build vertical AI solutions supercharged by Knowledge Graphs for leading newspapaers, publishers and museums. We're hiring! </p>
+            <a class="cta-button button button-default button-isagog" href="https://isagog.com" target="_blank" rel="noopener" role="button"><img class="icon" src="images/icons/generic-homepage.svg" alt="">Explore Isagog</a><br>
+        </section>
           <!-- Substack section -->
-          <section class="substack-section">
+          <section class="standout-section cloudvertigo">
               <img src="images/cloudy-head-magritte.png" alt="Cloudy Head by Magritte" class="profile-img">
               <h2 class="substack-title">Do Clouds Feel Vertigo?</h2>
               <p class="substack-subtitle">An Abstract Thinker's Companion</p>
@@ -124,7 +139,7 @@
                 <a id="link-github" href="https://www.github.com/davidmvalente/">GitHub</a>
               </p>
               <p>
-                  Working on something innovative in the Web3 space? Curious to exchange ideas around some of my outside interests?
+                  Working on something innovative in the Web3 space or beyond? Curious to exchange ideas around some of my outside interests?
                   Shedule a quick chat and let's explore possibilities to collaborate.
               </p>
               <a 
