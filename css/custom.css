@@ -5,22 +5,9 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 
-
-/* Avatar picture */
-.avatar {
-  width: 256px;
-  height: 256px;
-  object-fit: cover;
-  background-position: center;
-  border-radius: 50%;  /* 10%-40%: Squircles, 50% (default): True circle */
-}
-
-/* Footer text */
-.footer {
-  font-size: 70%;
-}
-
-/* Custom properties */
+/* ========================================
+   CSS CUSTOM PROPERTIES (CSS VARIABLES)
+   ======================================== */
 :root {
   --bg-color: #0a192f;
   --text-color: #8892b0;
@@ -28,12 +15,16 @@
   --accent-color: #64ffda;
 }
 
-/* Modern reset */
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+
+/* Modern CSS reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Base styles */
+/* Base body styles with cyberpunk theme */
 body {
   font-family: 'Courier New', monospace;
   background-color: var(--bg-color);
@@ -42,6 +33,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  /* Subtle grid pattern background */
   background-image: 
       linear-gradient(rgba(100, 255, 218, 0.05) 1px, transparent 1px),
       linear-gradient(90deg, rgba(100, 255, 218, 0.05) 1px, transparent 1px);
@@ -49,7 +41,11 @@ body {
   background-blend-mode: normal, normal, overlay;
 }
 
-/* Containers */
+/* ========================================
+   LAYOUT CONTAINERS
+   ======================================== */
+
+/* Main content container */
 .container {
   position: relative;
   z-index: 1;
@@ -58,81 +54,7 @@ body {
   padding: 2rem 1rem;
 }
 
-/* Typography */
-h1, h2, h3 {
-  font-family: 'Arial', sans-serif;
-  color: var(--header-color);
-  margin-top: 0;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  border-bottom: 2px solid var(--accent-color);
-  padding-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-/* Links */
-a {
-  color: var(--accent-color);
-  transition: all 0.3s ease;
-}
-
-a:hover, a:focus {
-  color: var(--header-color);
-  text-decoration: underline;
-}
-
-/* Sections */
-.section {
-  margin-bottom: 3rem;
-}
-
-/* Profile image */
-.profile-img {
-  display: block;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin: 2rem auto;
-  border: 4px solid var(--accent-color);
-  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
-}
-
-/* Retro elements */
-.retro-box {
-  border: 2px solid var(--accent-color);
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: rgba(100, 255, 218, 0.05);
-}
-
-/* Terminal-like effect */
-.terminal {
-  background-color: rgba(10, 25, 47, 0.7);
-  border: 1px solid var(--accent-color);
-  padding: 1rem;
-  font-family: 'Courier New', monospace;
-  color: var(--accent-color);
-  position: relative;
-  overflow: hidden;
-}
-
-.terminal::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 20px;
-  background: linear-gradient(var(--accent-color), var(--bg-color));
-  opacity: 0.1;
-}
-
-/* New warping background styles */
+/* Animated background warp effect container */
 .warp-container {
   position: fixed;
   top: 0;
@@ -144,6 +66,7 @@ a:hover, a:focus {
   z-index: -1;
 }
 
+/* Animated grid for warp effect */
 .warp-grid {
   width: 200%;
   height: 200%;
@@ -155,6 +78,249 @@ a:hover, a:focus {
   animation: warpEffect 10s infinite linear;
 }
 
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+/* Headers with custom styling */
+h1, h2, h3 {
+  font-family: 'Arial', sans-serif;
+  color: var(--header-color);
+  margin-top: 0;
+}
+
+/* Main heading with accent border */
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 0.5rem;
+}
+
+/* Section headings */
+h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+/* Substack section title styling */
+.substack-title {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Substack section subtitle styling */
+.substack-subtitle {
+  font-size: 1.2rem;
+  color: var(--header-color);
+  margin-bottom: 1rem;
+}
+
+/* Link styling with transitions */
+a {
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+a:hover, a:focus {
+  color: var(--header-color);
+  text-decoration: underline;
+}
+
+/* ========================================
+   CONTENT SECTIONS
+   ======================================== */
+
+/* Standard content sections */
+.section {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+/* Special highlighted sections (Substack, ISAGOG) */
+.standout-section {
+  background-color: rgba(10, 25, 47, 0.7);
+  border: 0px solid var(--accent-color);
+  padding: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Specific section variants */
+.standout-section.isagog {
+  /* Additional styling for ISAGOG section can be added here */
+}
+
+.standout-section.cloudvertigo {
+  /* Additional styling for Cloud Vertigo section can be added here */
+}
+
+/* ========================================
+   IMAGES
+   ======================================== */
+
+/* Profile images with cyberpunk glow effect */
+.profile-img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 2rem auto;
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+}
+
+/* ========================================
+   TERMINAL & RETRO EFFECTS
+   ======================================== */
+
+/* Terminal-like effect for certain sections */
+.terminal {
+  background-color: rgba(10, 25, 47, 0.7);
+  border: 1px solid var(--accent-color);
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+  color: var(--accent-color);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Terminal header effect */
+.terminal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(var(--accent-color), var(--bg-color));
+  opacity: 0.1;
+}
+
+/* Retro blinking cursor effect */
+.blink {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+/* ========================================
+   BUTTONS & INTERACTIVE ELEMENTS
+   ======================================== */
+
+/* Base button styles - incorporates elements from brands.css */
+.button,
+button {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 14px 12px 12px 12px;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 300px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  white-space: wrap;
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+  border-radius: 0px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* New styles */
+  /* padding: 12px 24px; */
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 0px var(--header-color);
+}
+
+/* Button hover and focus effects */
+button:hover,
+.button:focus {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  box-shadow: 5px 5px 0px var(--accent-color);
+  transform: translate(-3px, -3px);
+}
+
+/* Primary button styling */
+.button.button-primary {
+  color: var(--accent-color);
+  background-color: transparent;
+  border: 2px solid var(--accent-color);
+}
+
+.button.button-primary:hover,
+.button.button-primary:focus {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+}
+
+
+/* ========================================
+   BRAND-SPECIFIC BUTTON STYLES
+   (Incorporated from brands.css)
+   ======================================== */
+
+/* Substack button styling */
+.button.button-substack {
+  color: #FF6719;
+  background-color: transparent;
+  border: 2px solid #FF6719;
+}
+
+.button.button-substack:hover,
+.button.button-substack:focus {
+  background-color: #FF6719;
+  color: #ffffff;
+}
+
+/* Calendly button styling */
+.button.button-calendly {
+  color: #006BFF;
+  background-color: transparent;
+  border: 2px solid #006BFF;
+}
+
+.button.button-calendly:hover,
+.button.button-calendly:focus {
+  background-color: #006BFF;
+  color: #FFFFFF;
+}
+
+/* ISAGOG button styling (custom) */
+.button.button-isagog {
+  color: #5e9c4d;
+  background-color: transparent;
+  border: 2px solid #5e9c4d;
+}
+
+.button.button-isagog:hover,
+.button.button-isagog:focus {
+  background-color: #5e9c4d;
+  color: #ffffff;
+}
+
+/* ========================================
+   ICONS
+   (Incorporated from brands.css)
+   ======================================== */
+
+/* Icon styling for buttons */
+.icon {
+  padding: 0px 8px 3.5px 0px;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+/* Warp effect animation for background */
 @keyframes warpEffect {
   0% {
       transform: translate(-25%, -25%) rotate(0deg) scale(1);
@@ -167,71 +333,45 @@ a:hover, a:focus {
   }
 }
 
-/* Retro blinking effect */
-.blink {
-  animation: blink 1s steps(1, end) infinite;
-}
-
+/* Blinking animation for terminal cursor */
 @keyframes blink {
   0% { opacity: 1; }
   50% { opacity: 0; }
   100% { opacity: 1; }
 }
 
-/* New styles for the Substack section and button */
-.standout-section {
-  background-color: rgba(10, 25, 47, 0.7);
-  border: 0px solid var(--accent-color);
-  padding: 2rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  text-align: center;
-}
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
 
-.substack-title {
-  font-size: 2rem;
-  color: var(--accent-color);
-  margin-bottom: 0.5rem;
-}
-
-.substack-subtitle {
-  font-size: 1.2rem;
-  color: var(--header-color);
-  margin-bottom: 1rem;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  font-family: 'Courier New', monospace;
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--bg-color);
-  background-color: var(--accent-color);
-  border: none;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  box-shadow: 4px 4px 0px var(--header-color);
-}
-
-.cta-button:hover {
-  background-color: var(--header-color);
-  color: var(--accent-color);
-  box-shadow: 6px 6px 0px var(--accent-color);
-  transform: translate(-2px, -2px);
-}
-
-/* Accessibility */
+/* Respect user's motion preferences
 @media (prefers-reduced-motion: reduce) {
   .blink {
       animation: none;
   }
-}
+  
+  .warp-grid {
+      animation: none;
+  }
+} */
 
-/* Responsive adjustments */
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Mobile adjustments */
 @media (max-width: 600px) {
   body {
       font-size: 16px;
+  }
+  
+  .button,
+  button {
+      width: 280px;
+      font-size: 16px;
+  }
+  
+  .container {
+      padding: 1rem 0.5rem;
   }
 }
