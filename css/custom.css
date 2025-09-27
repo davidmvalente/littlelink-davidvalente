@@ -344,7 +344,7 @@ button:hover,
    ACCESSIBILITY
    ======================================== */
 
-/* Respect user's motion preferences */
+/* Respect user's motion preferences
 @media (prefers-reduced-motion: reduce) {
   .blink {
       animation: none;
@@ -353,7 +353,7 @@ button:hover,
   .warp-grid {
       animation: none;
   }
-}
+} */
 
 /* ========================================
    RESPONSIVE DESIGN
